@@ -1,0 +1,21 @@
+<div id="popup" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <div (click)="closePopup()" class="popup__close">x</div>
+      <div>
+        <label for="name">Имя:</label><br>
+        <input id="name" [(ngModel)]="name"><br>
+        <label for="surname">Фамилия:</label><br>
+        <input class="mb-3" id="surname" [(ngModel)]="surname"><br>
+        <select class="mt-3 mb-3" [(ngModel)]="type">
+          <option [ngValue]="myWorkerType.programmer">Программист</option>
+          <option [ngValue]="myWorkerType.designer">Дизайнер</option>
+          <option [ngValue]="myWorkerType.copywriter">Рекламщик</option>
+          <option [ngValue]="myWorkerType.manager">Менеджер</option>
+        </select>
+        <br />
+        <button (click)="onEditWorker()" class="btn btn-outline-primary btn-sm">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div>
